@@ -24,13 +24,15 @@ export default defineConfig({
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
       // Ensure imports like "@varlet/ui/es/..." resolve correctly to node_modules
-      '@varlet/ui': path.resolve(__dirname, 'node_modules/@varlet/ui/es'),
+      '@varlet/ui': path.resolve(__dirname, 'node_modules/@varlet/ui'),
     },
   },
   optimizeDeps: {
     // pre-bundle varlet snackbar style so rollup can find it during build
     include: [
-      '@varlet/ui/es/snackbar/style/index'
+      '@varlet/ui/es/snackbar/style/index',
+      '@varlet/ui/es/paper/style/index',
+      '@varlet/ui/es/button/style/index'
     ],
   },
 });
