@@ -16,7 +16,7 @@ export default defineConfig({
       resolvers: [VarletImportResolver({ autoImport: true })],
     }),
   ],
-  base: "./",
+  base: "/label-image/",
   build:{
     outDir:"./docs",
   },
